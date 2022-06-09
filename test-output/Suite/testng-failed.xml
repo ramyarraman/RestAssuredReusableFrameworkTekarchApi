@@ -14,6 +14,7 @@
     <classes>
       <class name="com.tekArchapi.tests.EndToEndTest">
         <methods>
+          <include name="deleteUsers" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="updateUsers" invocation-numbers="0"/>
         </methods>
