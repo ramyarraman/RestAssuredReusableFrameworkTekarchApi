@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-08T21:54:02 CDT" name="Suite" finished-at="2022-06-08T21:54:50 CDT" duration-ms="48528">
+    <groups>
+    </groups>
+    <test started-at="2022-06-08T21:54:02 CDT" name="Test" finished-at="2022-06-08T21:54:50 CDT" duration-ms="48528">
+      <class name="com.tekArchapi.tests.EndToEndTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.tekArchapi.tests.EndToEndTest@4da4253]" started-at="2022-06-08T21:54:02 CDT" name="setup" finished-at="2022-06-08T21:54:02 CDT" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addUsers(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.tekArchapi.tests.EndToEndTest@4da4253]" started-at="2022-06-08T21:54:02 CDT" name="addUsers" finished-at="2022-06-08T21:54:19 CDT" duration-ms="17282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TA-23d4637]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[545547]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[542464]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUsers -->
+        <test-method signature="updateUsers(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.tekArchapi.tests.EndToEndTest@4da4253]" started-at="2022-06-08T21:54:19 CDT" name="updateUsers" finished-at="2022-06-08T21:54:35 CDT" duration-ms="15249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TA-23d4637]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[545565]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[875464]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUsers -->
+        <test-method signature="getUsers()[pri:3, instance:com.tekArchapi.tests.EndToEndTest@4da4253]" started-at="2022-06-08T21:54:35 CDT" name="getUsers" finished-at="2022-06-08T21:54:43 CDT" duration-ms="7884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUsers -->
+        <test-method signature="deleteUsers(java.lang.String)[pri:4, instance:com.tekArchapi.tests.EndToEndTest@4da4253]" started-at="2022-06-08T21:54:43 CDT" name="deleteUsers" finished-at="2022-06-08T21:54:50 CDT" duration-ms="7896" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TA-23d4637]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUsers -->
+      </class> <!-- com.tekArchapi.tests.EndToEndTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
