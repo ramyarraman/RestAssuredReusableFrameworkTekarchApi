@@ -20,7 +20,7 @@ public class EndToEndTest extends UserServiceHelperMethods{
 				RestAssured.baseURI= getBaseUri();
 			}
 			
-			@Test(priority = 0, enabled = false)
+			@Test(priority = 0, enabled = true)
 			public void loginTekarchApi() {
 				
 				loginRequest();			
@@ -52,8 +52,7 @@ public class EndToEndTest extends UserServiceHelperMethods{
 				int numOfAccounts = getSizeOfResponse(response);
 	
 				Assert.assertEquals(totalAccounts+1, numOfAccounts);	
-				
-				System.out.println(response.body().jsonPath().get("[0].accountno"));
+			
 				String newAccountNo = getDataInJsonPath(response, "[0].accountno");
 //				System.out.println("accountNo: "+accountNo);
 				Assert.assertEquals(newAccountNo,accountNo );
@@ -102,11 +101,11 @@ public class EndToEndTest extends UserServiceHelperMethods{
 			Assert.assertEquals(result,"success");
 			
 			getUsersRequest();
-			String updatedDeptNo = findDataInJsonPathWithParameters(response,"accountno",accNoToUpdate,"departmentno");
+			String updatedDeptNo = findDataInJsonPathWithParameters(response,accNoToUpdate,"departmentno");
 			Assert.assertEquals(updatedDeptNo, newDeptNo);
-			String updatedPinCode = findDataInJsonPathWithParameters(response,"accountno",accNoToUpdate,"pincode");
+			String updatedPinCode = findDataInJsonPathWithParameters(response,accNoToUpdate,"pincode");
 			Assert.assertEquals(updatedPinCode, newPinCode);
-			String updatedSalary = findDataInJsonPathWithParameters(response,"accountno",accNoToUpdate,"salary");
+			String updatedSalary = findDataInJsonPathWithParameters(response,accNoToUpdate,"salary");
 			Assert.assertEquals(updatedSalary, newSalary);
 		}
 			
@@ -120,7 +119,7 @@ public class EndToEndTest extends UserServiceHelperMethods{
 			getUsersRequest();
 			String id = getIdOfAnAccount(response, accountNo);
 			String userId = getUserIdOfAnAccount(response, accountNo);
-			System.out.println("id , userId: "+id+" "+ userId);
+//			System.out.println("id , userId: "+id+" "+ userId);
 			
 			DeleteUsersResponsePOJO deleteResponseObj = deleteUsersRequest(userId,id);
 	

@@ -72,7 +72,7 @@ public class ReusableMethods {
 	public  String getDataInJsonPath(Response response, String path) {
 		return response.jsonPath().get(path);
 	}
-	public  String findDataInJsonPathWithParameters(Response response,String parameter,String parameterValue, String variableToFind ) {
+	public  String findDataInJsonPathWithParameters(Response response,String parameterValue, String variableToFind ) {
 		Map<String, String> accountList = response.body().jsonPath().param("parameterValue",parameterValue).get("find(it->it.accountno == parameterValue)");
 //		System.out.println("accountlist: "+accountList);
 		String value =  accountList.get(variableToFind);
@@ -81,11 +81,11 @@ public class ReusableMethods {
 		
 	}
 	public String getUserIdOfAnAccount(Response response, String accountNo) {
-		String userId = findDataInJsonPathWithParameters(response,"accountno",accountNo,"userid");
+		String userId = findDataInJsonPathWithParameters(response,accountNo,"userid");
 		return userId;
 	}
 	public String getIdOfAnAccount(Response response, String accountNo) {
-		String id = findDataInJsonPathWithParameters(response,"accountno",accountNo,"id");
+		String id = findDataInJsonPathWithParameters(response,accountNo,"id");
 		return id;
 	}
 	public int getSizeOfResponse(Response response) {
